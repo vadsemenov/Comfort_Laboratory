@@ -1,6 +1,7 @@
 ﻿using System;
 using ATM.Core;
 using System.Linq;
+using System.Text;
 
 namespace ATM
 {
@@ -18,12 +19,46 @@ namespace ATM
 
         public static void Main(string[] args)
         {
-            Console.WriteLine();
-            ATMStorage storage = new ATMStorage(10);
-            Console.WriteLine(storage._moneyStorage.GetValueOrDefault(MoneyType.Ten));
-            Console.WriteLine(storage.GetATMInfo());
-            Console.ReadKey();
+            ATM atm = new ATM(110);
+            bool result = atm.GetMoney(MoneyType.OneThousand, 10);
+            result = atm.GiveMoney(MoneyType.OneThousand, 20_000);
+            Console.WriteLine(atm.GetATMServiceInfo());
 
+
+            bool IsExit = false;
+
+            while (!IsExit)
+            {
+                //ATM atm = new ATM(10);
+                Console.WriteLine("");
+                Console.WriteLine("Введите номер:");
+                
+                int choice = 0;
+                if (!int.TryParse(Console.ReadLine(), out choice))
+                {
+                    continue;
+                }
+
+               // switch
+            }
+        }
+
+        public static string GetReport()
+        {
+            Console.Clear();
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("----------------------------");
+            using (StreamReader sr = new StreamReader("Log.txt"))
+            {
+                string line;
+                while (( line = sr.ReadLine()) !=null)
+                {
+                    sb.Append(line);
+                }
+            }
+
+            sb.Append("---------------------------");
+            return sb.ToString();
         }
     }
 }

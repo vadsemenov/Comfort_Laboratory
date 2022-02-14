@@ -1,27 +1,50 @@
-﻿using System;
-using System.Numerics;
-using ATM.Core;
+﻿using ATM.Core;
 
 namespace ATM
 {
     public class ATM
     {
-        public ATMCondition Condition { get; set;} = ATMCondition.Working;
+        private ATMCondition _condition = ATMCondition.Working;
+        private ATMStorage _storage;
 
-
-        public void GetMoney(MoneyType moneyType,BigInteger sum )
+        public ATM(int limitOfBills) : this(limitOfBills, ATMCondition.Working)
         {
-
         }
 
-        public void GiveMoney()
+        public ATM(int limitOfBills, ATMCondition condition)
         {
-
+            _storage = new ATMStorage(limitOfBills);
+            _condition = condition;
         }
 
+        public bool GetMoney(MoneyType moneyType, int numberOfBills)
+        {
 
+            if (_storage.TryGetMoney( moneyType, numberOfBills))
+            {
+                return true;
+            }
 
+            return false;
+        }
 
+        public bool GiveMoney(MoneyType moneyType, int sum)
+        {
+            if (_storage.TryGiveMoney(moneyType, sum))
+            {
+                return true;
+            }
+            return false;
+        }
 
+        public void ChangeCondition(ATMCondition condition)
+        {
+            this._condition = condition;
+        }
+
+        public string GetATMServiceInfo()
+        {
+            return _storage.GetATMStorageInfo();
+        }
     }
 }
