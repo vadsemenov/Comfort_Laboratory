@@ -23,7 +23,7 @@
 *.lo
 
 # Shared objects (inc. Windows DLLs)
-*.dll
+#*.dll
 *.so
 *.so.*
 *.dylib
@@ -37,6 +37,9 @@
 *.hex
 
 # Debug files
+.vs/
+bin/
+obj/
 *.dSYM/
 *.su
 *.idb
