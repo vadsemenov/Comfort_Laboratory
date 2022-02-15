@@ -4,7 +4,7 @@ namespace ATM
 {
     public class ATM
     {
-        private ATMCondition _condition = ATMCondition.Working;
+        public ATMCondition Condition { get; set; } = ATMCondition.Working;
         private ATMStorage _storage;
 
         public ATM(int limitOfBills) : this(limitOfBills, ATMCondition.Working)
@@ -14,7 +14,7 @@ namespace ATM
         public ATM(int limitOfBills, ATMCondition condition)
         {
             _storage = new ATMStorage(limitOfBills);
-            _condition = condition;
+            Condition = condition;
         }
 
         public bool GetMoney(MoneyType moneyType, int numberOfBills)
@@ -35,11 +35,6 @@ namespace ATM
                 return true;
             }
             return false;
-        }
-
-        public void ChangeCondition(ATMCondition condition)
-        {
-            this._condition = condition;
         }
 
         public string GetATMServiceInfo()
