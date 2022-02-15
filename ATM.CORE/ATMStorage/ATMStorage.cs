@@ -54,6 +54,12 @@ namespace ATM.Core
                 return false;
             }
 
+            if (sum <= 0)
+            {
+                _logger.Log("Запрашиваемая сумма не может быть равна 0.");
+                return false;
+            }
+
             if (_moneyStorage.GetValueOrDefault(moneyType) >= numberOfBills)
             {
                 _moneyStorage[moneyType] -= numberOfBills;
