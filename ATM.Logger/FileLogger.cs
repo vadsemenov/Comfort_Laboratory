@@ -1,8 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Threading.Tasks;
-
-namespace ATM.Core
+﻿namespace ATM.Logger
 {
     public class FileLogger
     {
@@ -27,17 +23,17 @@ namespace ATM.Core
         {
             try
             {
-                 using (StreamWriter sw = new StreamWriter("Log.txt",true))
-                { 
-                   await sw.WriteLineAsync(DateTime.Now.ToString() + " " + log );
+                using (StreamWriter sw = new StreamWriter("Log.txt", true))
+                {
+                    await sw.WriteLineAsync(DateTime.Now.ToString() + " " + log);
                 }
             }
             catch (Exception e)
             {
-                 Console.WriteLine(e.Message);
-                 return false;
+                Console.WriteLine(e.Message);
+                return false;
             }
-           
+
             return true;
         }
     }
