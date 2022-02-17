@@ -1,9 +1,9 @@
 ﻿
 using System.Collections.Generic;
 using System.Text;
-using ATM.Logger;
+using ATMWPF.Logger;
 
-namespace ATM.Core
+namespace ATMWPF.Core
 {
     internal class ATMStorage : IStorage
     {

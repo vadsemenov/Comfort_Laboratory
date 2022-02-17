@@ -1,6 +1,6 @@
 ﻿using System.Numerics;
 
-namespace ATM
+namespace ATMWPF
 {
     internal interface IGiveMoney
     {

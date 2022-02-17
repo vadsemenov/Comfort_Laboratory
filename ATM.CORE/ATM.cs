@@ -1,6 +1,6 @@
-﻿using ATM.Core;
+﻿using ATMWPF.Core;
 
-namespace ATM
+namespace ATMWPF
 {
     public class ATM
     {

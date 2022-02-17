@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATM.Console", "ATM.Console\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATM.Tests", "ATM.Tests\ATM.Tests.csproj", "{7CDD7094-7B82-4116-A9CD-3F5F2135D636}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM.Logger", "ATM.Logger\ATM.Logger.csproj", "{DD472958-9710-4324-9640-F953C152AEF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATM.Logger", "ATM.Logger\ATM.Logger.csproj", "{DD472958-9710-4324-9640-F953C152AEF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM.WPF", "ATM.WPF\ATM.WPF.csproj", "{F84F8E27-4D85-4AD9-B989-B1BA1B010ED9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{DD472958-9710-4324-9640-F953C152AEF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD472958-9710-4324-9640-F953C152AEF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD472958-9710-4324-9640-F953C152AEF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F84F8E27-4D85-4AD9-B989-B1BA1B010ED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F84F8E27-4D85-4AD9-B989-B1BA1B010ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F84F8E27-4D85-4AD9-B989-B1BA1B010ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F84F8E27-4D85-4AD9-B989-B1BA1B010ED9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,9 +1,9 @@
 using System;
 using Xunit;
-using ATM.Core;
+using ATMWPF.Core;
 using Xunit.Abstractions;
 
-namespace ATM.Tests
+namespace ATMWPF.Tests
 {
     public class Tests
     {

@@ -1,4 +1,4 @@
-﻿namespace ATM.Core
+﻿namespace ATMWPF.Core
 {
     public enum ATMCondition
     {

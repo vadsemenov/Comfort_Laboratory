@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ATM
+namespace ATMWPF
 {
     internal interface IGetMoney
     {

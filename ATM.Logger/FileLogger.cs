@@ -1,4 +1,4 @@
-﻿namespace ATM.Logger
+﻿namespace ATMWPF.Logger
 {
     public class FileLogger
     {

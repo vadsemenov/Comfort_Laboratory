@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
-using ATM.Core;
+using ATMWPF.Core;
 using System.Linq;
 using System.Text;
 
-namespace ATM
+namespace ATMWPF
 {
     public class ATMRunner
     {
@@ -156,15 +156,19 @@ namespace ATM
             //Console.Clear();
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("----------------------------");
-            using (StreamReader sr = new StreamReader("Log.txt"))
+            try
             {
+                using StreamReader sr = new StreamReader("Log.txt");
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
                     sb.Append(line);
                 }
             }
-
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
             sb.Append("---------------------------");
             return sb.ToString();
         }
